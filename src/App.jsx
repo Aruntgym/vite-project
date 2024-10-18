@@ -75,7 +75,7 @@ const App = () => {
   // Chatbot-related states
   const [input, setInput] = useState("");
   const [conversations, setConversations] = useState([
-    { text: "Hello! How can I assist you?", type: "bot" },
+    { text: "", type: "bot" },
   ]);
   const messagesEndRef = useRef(null);
 
@@ -125,40 +125,7 @@ const App = () => {
             <div className="chat-container">
               <Feedback />
               <div className="chat-input">
-                <form onSubmit={handleSubmit}>
-                  <TextField
-                    label="Type a message..."
-                    variant="outlined"
-                    fullWidth
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                  />
-                  <Button
-                    type="submit"
-                    variant="contained"
-                    color="primary"
-                    style={{ marginTop: "10px" }}
-                  >
-                    Send
-                  </Button>
-                </form>
-              </div>
-              <div className="chatbot-messages">
-                {conversations.map((conversation, index) => (
-                  <div
-                    key={index}
-                    className={`chatbot-message ${
-                      conversation.type === "bot" ? "bot-message" : "user-message"
-                    }`}
-                  >
-                    {conversation.text}
-                  </div>
-                ))}
-                <div ref={messagesEndRef} />
-              </div>
-            </div>
-          )}
-          <Grid container spacing={4}>
+              <Grid container spacing={4}>
             {showFeatures.includes("odometer") && (
               <Grid item xs={12} sm={6} md={4}>
                 <h3>Odometer Display</h3>
@@ -274,6 +241,40 @@ const App = () => {
               </Grid>
             )}
           </Grid>
+                <form className="search-input-form" onSubmit={handleSubmit}>
+                  <TextField
+                    label=""
+                    variant="outlined"
+                    fullWidth
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)}
+                  />
+                  <Button
+                    type="submit"
+                    variant="contained"
+                    color="primary"
+                    style={{ marginTop: "" , gap: "1 rem"}}
+                  >
+                    Send
+                  </Button>
+                </form>
+              </div>
+              {/* <div className="chatbot-messages">
+                {conversations.map((conversation, index) => (
+                  <div
+                    key={index}
+                    className={`chatbot-message ${
+                      conversation.type === "bot" ? "bot-message" : "user-message"
+                    }`}
+                  >
+                    {conversation.text}
+                  </div>
+                ))}
+                <div ref={messagesEndRef} />
+              </div> */}
+            </div>
+          )}
+          
         </div>
       </div>
     </Container>

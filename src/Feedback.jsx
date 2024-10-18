@@ -17,23 +17,23 @@ const Feedback = () => (
       <tbody>
         <tr>
           <td>1. How satisfied are you with our service? (1-5)</td>
-          <td></td>
+          <td><input/></td>
         </tr>
         <tr>
           <td>2. What do you like most about our service?</td>
-          <td></td>
+          <td><input/></td>
         </tr>
         <tr>
           <td>3. What improvements would you suggest?</td>
-          <td></td>
+          <td><input/></td>
         </tr>
         <tr>
           <td>4. How likely are you to recommend us? (1-10)</td>
-          <td></td>
+          <td><input/></td>
         </tr>
         <tr>
           <td>5. Any additional comments or suggestions?</td>
-          <td></td>
+          <td><input/></td>
         </tr>
       </tbody>
     </table>
