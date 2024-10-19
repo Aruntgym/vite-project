@@ -10,7 +10,7 @@ import {
   TextField,
   Alert,
 } from "@mui/material";
-import Odometer from "react-odometerjs";
+import Odometer from "./Odometer";
 import "odometer/themes/odometer-theme-default.css";
 import { Line } from "react-chartjs-2";
 import { useTable } from "react-table";
@@ -18,6 +18,7 @@ import "chart.js/auto";
 import SideNav from "./SideNav"; // Ensure you have this component
 import Feedback from "./Feedback"; // Ensure you have this component
 import "./App.css"; // Include custom styles
+import ReactOdometer from "react-odometerjs";
 
 const App = () => {
   const [searchInput, setSearchInput] = useState("");
@@ -129,8 +130,8 @@ const App = () => {
             {showFeatures.includes("odometer") && (
               <Grid item xs={12} sm={6} md={4}>
                 <h3>Odometer Display</h3>
-                <Odometer value={1000} format="d" />
-                <Button variant="contained">Increment</Button>
+                  <Odometer/>
+                {/* <Button variant="contained">Increment</Button> */}
               </Grid>
             )}
 

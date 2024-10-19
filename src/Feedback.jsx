@@ -17,7 +17,7 @@ const Feedback = () => (
       <tbody>
         <tr>
           <td>1. How satisfied are you with our service? (1-5)</td>
-          <td><input/></td>
+          <td><input style={{borderRadius: "none"}}/></td>
         </tr>
         <tr>
           <td>2. What do you like most about our service?</td>
